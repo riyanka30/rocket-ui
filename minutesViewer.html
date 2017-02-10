@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<title>
+	Minutes Viewer
+</title>
+
+<!-- ***************** HEAD starts ***************** -->
+<head>
+	<meta charset="UTF-8">
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/jquery.dataTables.min.js"></script>
+	<script src="scripts/minutesBuilder.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main-stylesheet.css">
+	<link rel="shortcut icon" href="images/minfavicon.png" type="image/x-icon" />
+
+	
+</head>
+<!-- ***************** Body starts ************************* -->
+<body>
+	<div class="container-fluid">
+		<div class="row" id="heading">
+			<div class='col-sm-3'>
+				<h3 style="vertical-align: middle;">Minutes viewer</h3>
+			</div>
+			<div class='col-sm-6'></div>
+			<div class='col-sm-3' style="text-align: right;padding-right: 5px;padding-top: 9px">
+				<a href="http://www.turnerandtownsend.com/en" target="_blank">
+					<img id="tntlogo"  src="images/tt_logo.jpg" alt="(t&t)" style="height: 35px;width: 250px;">
+				</a>	
+			</div>
+		</div>
+		<hr style="padding: 0px;margin: 0px">
+	</div>
+
+
+	<div class="container-fluid" style="width: 100%">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10 well" style="text-align: center;">
+				<!-- <h4 style="color: #428bca">Minutes</h4> -->
+				<form class="form-horizontal">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Meeting title</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mtitle" value="Discussion on SRR3" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Client</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mclient" value="Intel" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Project</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mproject" value="SRR3" readonly="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Time</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mtime" value="Wed 25th January, 2017" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Location</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mlocation" value="Intel office, Bangalore" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Chair person</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mchair" value="Ranjeet Pundlik" readonly>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="form-group">
+							<label class="control-label col-sm-2">Attendees</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="mattendees" value="ranjeet.pundlik@turntown.com" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label class="control-label col-sm-4">Meeting #</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="mid" value="22" readonly>
+							</div>
+						</div>
+					</div>
+				</div>
+				</form>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	<!-- container ends -->
+	<!-- Meeting part ends -->
+	<div class="container-fluid" style="width: 100%">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10" style="text-align: center;">
+				<h4 style="color: #428bca;text-align: center;">Discussion Topics</h4>
+				<table id="topicsList" class="display table table-bordered" cellspacing="0" width="100%" style="text-align: left;">
+					<thead>
+						<tr id="tablehead" style="background-color: #144178;color: white">
+							<th>Title</th>
+							<th>Description</th>
+							<th>Owners</th>
+							<th>Target date</th>
+							<th>Status</th>
+							<th>Minutes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>MEP coordination issues</td>
+							<td>HVAC ducting</td>
+							<td>Ranjeet Pundlik</td>
+							<td>2 Feb 2017</td>
+							<!-- <td style="color: crimson"><b>PENDING</b></td> -->
+							<td style="color: crimson"><b>Pending</b></td>
+							<td><textarea class="form-control" rows="5" id="minute1" readonly>the work was not started because of legal issues.</textarea></td>
+						</tr>
+						<tr>
+							<td>Status of loose furniture</td>
+							<td>delay in furniture delivery</td>
+							<td>Ashish Jain</td>
+							<td>8 Feb 2017</td>
+							<!-- <td style="color: crimson"><b>PENDING</b></td> -->
+							<td style="color: #E39B1E"><b>In Progress</b></td>
+							<td><textarea class="form-control" rows="5" id="minute2" readonly>The work is in progress with furniture expected to be delivered soon.</textarea></td>
+						</tr>
+						<tr>
+							<td>Passive IT works</td>
+							<td>Termination of data points and installation of face plates</td>
+							<td>Venus Bhardwaj</td>
+							<td>12 Feb 2017</td>
+							<!-- <td style="color: #089111"><b>COMPLETE</b></td> -->
+							<td style="color: #089111"><b>Complete</b></td>
+							<td><textarea class="form-control" rows="5" id="minute3" readonly>Completed the work and comissioned the same.</textarea></td>
+						</tr>
+						<tr>
+							<td>Ceilings work</td>
+							<td>Status of gypsum ceiling installation in cafe</td>
+							<td>Ranjeet Pundlik</td>
+							<td>4 Feb 2017</td>
+							<!-- <td style="color: #E39B1E"><b>IN PROGRESS</b></td> -->
+							<td style="color: crimson"><b>Pending</b></td>
+							<td><textarea class="form-control" rows="5" id="minute4" readonly>Pending due to legal issues</textarea></td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+			
+				<div class="form-group">        
+					<div class="col-sm-offset-1 col-sm-10">
+						<a class="btn btn-primary" href="meetings.html">Back to Meetings</a>
+					</div>
+				</div>			
+			
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+
+
+<!-- ############################################################################################# -->
+	<br><br>
+	<div class="footer" style="height: 40px;padding-top: 8px;">
+		<footer>Visit the portal <a href="https://ac.akamai.com/community/teams/gss/akatec/aps" target="_blank" style="color: #aaa">T2</a>
+		</footer>
+	</div>
+</body>
+
+</html>

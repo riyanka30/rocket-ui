@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<title>
+	Meetings
+</title>
+
+<!-- ***************** HEAD starts ***************** -->
+<head>
+	<meta charset="UTF-8">
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/meetings.js"></script>
+	<script src="scripts/moment.js"></script>
+	<script src="scripts/jquery.dataTables.min.js"></script>
+	<script src="scripts/bootstrap-tagsinput.min.js"></script>
+	<script src="scripts/bootstrap-datetimepicker.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-tagsinput.css" />
+	<link rel="stylesheet" type="text/css" href="css/main-stylesheet.css">
+	<link rel="shortcut icon" href="images/minfavicon.png" type="image/x-icon" />
+
+	
+</head>
+<!-- ***************** Body starts ************************* -->
+<body>
+	<div class="container-fluid">
+		<div class="row" id="heading">
+			<div class='col-sm-3'>
+				<h3 style="vertical-align: middle;">Meetings Manager</h3>
+			</div>
+			<div class='col-sm-6'></div>
+			<div class='col-sm-3' style="text-align: right;padding-right: 5px;padding-top: 9px">
+				<a href="http://www.turnerandtownsend.com/en" target="_blank">
+					<img id="tntlogo"  src="images/tt_logo.jpg" alt="(t&t)" style="height: 35px;width: 250px;">
+				</a>	
+			</div>
+		</div>
+		<hr style="padding: 0px;margin: 0px">
+	</div>
+
+
+	<div class="container-fluid" style="width: 100%">
+		<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-6"></div>
+				<div class="col-md-4" style="text-align: right;">
+				<a href="">Welcome Ranjeet</a> | 
+				<a href="">Logout</a>
+				<!-- <button class="btn btn-link"></button>
+				<button class="btn btn-link">Logout</button> -->
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+			
+				<h4 style="color: #428bca;text-align: center;">Meetings this week</h4>
+
+				<table id="thisweekmeetings" class="display table table-bordered" cellspacing="0" width="100%">
+					<thead>
+						<tr id="tablehead" style="background-color: #144178;color: white">
+							<th>Meeting #</th>
+							<th>Title</th>
+							<th>Chair person</th>
+							<th>Schdedule</th>
+							<th>Location</th>
+							<th>Attendees</th>
+							<th>Minutes Status</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10</td>
+							<td>Design review meeting with Bloomberg</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #E39B1E"><b>PENDING</b></td>
+							<td>
+							<a class="btn btn-warning btn-xs" href="minutesBuilder.html" target="_blank">Add minutes</a></td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>Procurement meeting with Intel</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #089111"><b>COMPLETED</b></td>
+							<td><a class="btn btn-success btn-xs" href="minutesViewer.html" target="_blank">View minutes</a></td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td>Construction review with Shell</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #E39B1E"><b>PENDING</b></td>
+							<td>
+							<a class="btn btn-warning btn-xs" href="minutesBuilder.html" target="_blank">Add minutes</a></td>
+						</tbody>
+					</table>
+				</div>
+				<!-- the main column ends here -->
+				<div class="col-md-1"></div>
+			</div><hr style="margin: 10px;"></hr>
+			<!-- ################################# row 1 ends ###################################-->
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+				<h4 style="color: #428bca;text-align: center;">Meetings Last week</h4>
+
+				<table id="lastweekmeetings" class="display table table-bordered" cellspacing="0" width="100%">
+					<thead>
+						<tr id="tablehead" style="background-color: #144178;color: white">
+							<th>Meeting #</th>
+							<th>Title</th>
+							<th>Chair person</th>
+							<th>Schdedule</th>
+							<th>Location</th>
+							<th>Attendees</th>
+							<th>Minutes Status</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>20</td>
+							<td>Design review meeting with Bloomberg</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #E39B1E"><b>PENDING</b></td>
+							<td><a class="btn btn-warning btn-xs" href="minutesBuilder.html" target="_blank">Add minutes</a></td>
+						</tr>
+						<tr>
+							<td>24</td>
+							<td>Procurement meeting with Intel</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #089111"><b>COMPLETED</b></td>
+							<td><a class="btn btn-success btn-xs" href="minutesViewer.html" target="_blank">View minutes</a></td>
+						</tr>
+						<tr>
+							<td>26</td>
+							<td>Construction review with Shell</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #E39B1E"><b>PENDING</b></td>
+							<td><a class="btn btn-warning btn-xs" href="minutesBuilder.html" target="_blank">Add minutes</a></td>
+						</tbody>
+					</table>
+				</div>
+				<!-- the main column ends here -->
+				<div class="col-md-1"></div>
+			</div><hr style="margin: 10px;"></hr>
+			<!-- ###################################row 2 ends #################################-->
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+				<h4 style="color: #428bca;text-align: center;">Older Meetings</h4>
+
+				<table id="olderweekmeetings" class="display table table-bordered" cellspacing="0" width="100%">
+					<thead>
+						<tr id="tablehead" style="background-color: #144178;color: white">
+							<th>Meeting #</th>
+							<th>Title</th>
+							<th>Chair person</th>
+							<th>Schdedule</th>
+							<th>Location</th>
+							<th>Attendees</th>
+							<th>Minutes Status</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>30</td>
+							<td>Design review meeting with Bloomberg</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #E39B1E"><b>PENDING</b></td>
+							<td><a class="btn btn-warning btn-xs" href="minutesBuilder.html" target="_blank">Add minutes</a></td>
+						</tr>
+						<tr>
+							<td>31</td>
+							<td>Procurement meeting with Intel</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #089111"><b>COMPLETED</b></td>
+							<td><a class="btn btn-success btn-xs" href="minutesViewer.html" target="_blank">View minutes</a></td>
+						</tr>
+						<tr>
+							<td>33</td>
+							<td>Construction review with Shell</td>
+							<td>Ranjeet Pundlik</td>
+							<td>24 Nov 2016 2:30 PM</td>
+							<td>T&T Office,Bengaluru</td>
+							<td>Ranjeet, Ashish, Venus</td>
+							<td style="color: #E39B1E"><b>PENDING</b></td>
+							<td><a class="btn btn-warning btn-xs" href="minutesBuilder.html" target="_blank">Add minutes</a></td>
+						</tbody>
+					</table>
+				</div>
+				<!-- the main column ends here -->
+				<div class="col-md-1"></div>
+			</div>
+			<!-- ###################################row 3 ends #################################-->
+		</div>
+		<!-- container ends -->
+
+		<br><br>
+		<div class="footer" style="height: 40px;padding-top: 8px;">
+			<footer>Visit the portal <a href="https://ac.akamai.com/community/teams/gss/akatec/aps" target="_blank" style="color: #aaa">T2</a>
+			</footer>
+		</div>
+	</body>
+
+	</html>
