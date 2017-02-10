@@ -1,10 +1,15 @@
 # Minutes creator
-This repository contains the front-end for the minutes project.   
+This repository contains the front-end for the minutes project.
+The work is in progress :)
 
-![Alt text](/screenshots/agendabuilder.png?raw=true "Agenda")
+###Agenda
+![Agenda](/screenshots/agendabuilder.png?raw=true "Agenda")
 
-![Alt text](/screenshots/meetings.png?raw=true "Meetings")
+###Meetings
+![Meetings](/screenshots/meetings.png?raw=true "Meetings")
 
-![Alt text](/screenshots/minutesbuilder.png?raw=true "Minutes builder")
+###Minutes Builder
+![Minutes builder](/screenshots/minutesbuilder.png?raw=true "Minutes builder")
 
-![Alt text](/screenshots/minutesviewer.png?raw=true "Minutes viewer")
+###Minutes Viewer
+![Minutes Viewer](/screenshots/minutesviewer.png?raw=true "Minutes viewer")
